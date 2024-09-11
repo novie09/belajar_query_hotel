@@ -1,0 +1,219 @@
+# mysql -u root
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 57
+Server version: 10.4.25-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> use polmed_kuliah_reservasi_hotel;
+Database changed
+MariaDB [polmed_kuliah_reservasi_hotel]> show tables;
++-----------------------------------------+
+| Tables_in_polmed_kuliah_reservasi_hotel |
++-----------------------------------------+
+| tb_kamar                                |
+| tb_pelanggan                            |
+| tb_reservasi_hotel                      |
++-----------------------------------------+
+3 rows in set (0.001 sec)
+
+MariaDB [polmed_kuliah_reservasi_hotel]> select * from tb_kamar;
++----------+-------------+-----------+-----------------+
+| kamar_id | jenis_kamar | kapasitas | harga_per_malam |
++----------+-------------+-----------+-----------------+
+|        1 | Deluxe      |         2 |          750000 |
+|        2 | Superior    |         2 |          500000 |
+|        3 | Suite       |         4 |         1500000 |
+|        4 | Standard    |         2 |          300000 |
+|        5 | Deluxe      |         2 |          750000 |
+|        6 | Superior    |         2 |          500000 |
+|        7 | Suite       |         4 |         1500000 |
+|        8 | Standard    |         2 |          300000 |
+|        9 | Deluxe      |         2 |          750000 |
+|       10 | Superior    |         2 |          500000 |
+|       11 | Suite       |         4 |         1500000 |
+|       12 | Standard    |         2 |          300000 |
+|       13 | Deluxe      |         2 |          750000 |
+|       14 | Superior    |         2 |          500000 |
+|       15 | Suite       |         4 |         1500000 |
+|       16 | Standard    |         2 |          300000 |
+|       17 | Deluxe      |         2 |          750000 |
+|       18 | Superior    |         2 |          500000 |
+|       19 | Suite       |         4 |         1500000 |
+|       20 | Standard    |         2 |          300000 |
++----------+-------------+-----------+-----------------+
+20 rows in set (0.001 sec)
+
+MariaDB [polmed_kuliah_reservasi_hotel]> select * from tb_pelang
+gan;
++--------------+----------------+---------------+---------------+---------------------------------+--------------------+--------------+
+| pelanggan_id | nama           | tanggal_lahir | jenis_kelamin | alamat                          | email              | no_telepon   |
++--------------+----------------+---------------+---------------+---------------------------------+--------------------+--------------+
+|            1 | Andi Sunarya   | 1985-07-15    | Laki-laki     | Jl. Merdeka No.10, Bandung      | andi@example.com   | 081234567890 |
+|            2 | Budi Raharjo   | 1990-11-20    | Laki-laki     | Jl. Kemerdekaan No.5, Jakarta   | budi@example.com   | 082345678901 |
+|            3 | Citra Kirana   | 1992-05-22    | Perempuan     | Jl. Rajawali No.3, Surabaya     | citra@example.com  | 083456789012 |
+|            4 | Dewi Sartika   | 1988-01-30    | Perempuan     | Jl. Sudirman No.8, Yogyakarta   | dewi@example.com   | 084567890123 |
+|            5 | Eko Suharjo    | 1983-09-25    | Laki-laki     | Jl. Ahmad Yani No.7, Semarang   | eko@example.com    | 085678901234 |
+|            6 | Fajar Nugraha  | 1986-12-12    | Laki-laki     | Jl. Gatot Subroto No.9, Medan   | fajar@example.com  | 086789012345 |
+|            7 | Gita Surya     | 1991-10-10    | Perempuan     | Jl. Pahlawan No.11, Palembang   | gita@example.com   | 087890123456 |
+|            8 | Hani Putri     | 1993-08-19    | Perempuan     | Jl. Bung Tomo No.6, Makassar    | hani@example.com   | 088901234567 |
+|            9 | Iwan Setiawan  | 1984-06-06    | Laki-laki     | Jl. Sejahtera No.4, Denpasar    | iwan@example.com   | 089012345678 |
+|           10 | Julia Perez    | 1989-03-03    | Perempuan     | Jl. Raya Kuta No.13, Bali       | julia@example.com  | 080123456789 |
+|           11 | Kevin Sanjaya  | 1994-01-01    | Laki-laki     | Jl. Majapahit No.14, Pontianak  | kevin@example.com  | 081234567891 |
+|           12 | Luna Maya      | 1995-02-02    | Perempuan     | Jl. Kalimantan No.15, Samarinda | luna@example.com   | 082345678902 |
+|           13 | Mila Kunis     | 1990-12-12    | Perempuan     | Jl. Celebes No.16, Palu         | mila@example.com   | 083456789013 |
+|           14 | Nino Fernandez | 1989-10-11    | Laki-laki     | Jl. Sulawesi No.17, Manado      | nino@example.com   | 084567890124 |
+|           15 | Olga Syahputra | 1992-09-09    | Laki-laki     | Jl. Sumatera No.18, Padang      | olga@example.com   | 085678901235 |
+|           16 | Pamela Bowie   | 1993-08-08    | Perempuan     | Jl. Jawa No.19, Bandar Lampung  | pamela@example.com | 086789012346 |
+|           17 | Queen Latifah  | 1991-07-07    | Perempuan     | Jl. Papua No.20, Jayapura       | queen@example.com  | 087890123457 |
+|           18 | Rico Tampatty  | 1995-05-05    | Laki-laki     | Jl. Maluku No.21, Ambon         | rico@example.com   | 088901234568 |
+|           19 | Sandra Dewi    | 1990-03-03    | Perempuan     | Jl. Borneo No.22, Banjarmasin   | sandra@example.com | 089012345679 |
+|           20 | Tina Toon      | 1991-01-01    | Perempuan     | Jl. Nusa Tenggara No.23, Kupang | tina@example.com   | 080123456790 |
++--------------+----------------+---------------+---------------+---------------------------------+--------------------+--------------+
+20 rows in set (0.001 sec)
+
+MariaDB [polmed_kuliah_reservasi_hotel]> select * from tb_reserv
+asi_hotel;
++--------------+--------------+----------+------------------+-------------------+--------------+-------------+
+| reservasi_id | pelanggan_id | kamar_id | tanggal_check_in | tanggal_check_out | jumlah_kamar | total_biaya |
++--------------+--------------+----------+------------------+-------------------+--------------+-------------+
+|            1 |            1 |        1 | 2024-09-01       | 2024-09-03        |            2 |     3000000 |
+|            2 |            2 |        2 | 2024-09-05       | 2024-09-07        |            1 |     1000000 |
+|            3 |            3 |        3 | 2024-09-10       | 2024-09-12        |            3 |     9000000 |
+|            4 |            4 |        4 | 2024-09-15       | 2024-09-17        |            1 |      600000 |
+|            5 |            5 |        5 | 2024-09-20       | 2024-09-22        |            2 |     3000000 |
+|            6 |            6 |        6 | 2024-09-25       | 2024-09-27        |            1 |     1000000 |
+|            7 |            7 |        7 | 2024-10-01       | 2024-10-03        |            3 |     9000000 |
+|            8 |            8 |        8 | 2024-10-05       | 2024-10-07        |            1 |      600000 |
+|            9 |            9 |        9 | 2024-10-10       | 2024-10-12        |            2 |     3000000 |
+|           10 |           10 |       10 | 2024-10-15       | 2024-10-17        |            1 |     1000000 |
+|           11 |           11 |       11 | 2024-10-20       | 2024-10-22        |            3 |     9000000 |
+|           12 |           12 |       12 | 2024-10-25       | 2024-10-27        |            1 |      600000 |
+|           13 |           13 |       13 | 2024-11-01       | 2024-11-03        |            2 |     3000000 |
+|           14 |           14 |       14 | 2024-11-05       | 2024-11-07        |            1 |     1000000 |
+|           15 |           15 |       15 | 2024-11-10       | 2024-11-12        |            3 |     9000000 |
+|           16 |           16 |       16 | 2024-11-15       | 2024-11-17        |            1 |      600000 |
+|           17 |           17 |       17 | 2024-11-20       | 2024-11-22        |            2 |     3000000 |
+|           18 |           18 |       18 | 2024-11-25       | 2024-11-27        |            1 |     1000000 |
+|           19 |           19 |       19 | 2024-12-01       | 2024-12-03        |            3 |     9000000 |
+|           20 |           20 |       20 | 2024-12-05       | 2024-12-07        |            1 |      600000 |
++--------------+--------------+----------+------------------+-------------------+--------------+-------------+
+20 rows in set (0.000 sec)
+
+MariaDB [polmed_kuliah_reservasi_hotel]> select
+    -> nama,
+    -> email,
+    -> no_telepon
+    -> from tb_pelanggan;
++----------------+--------------------+--------------+
+| nama           | email              | no_telepon   |
++----------------+--------------------+--------------+
+| Andi Sunarya   | andi@example.com   | 081234567890 |
+| Budi Raharjo   | budi@example.com   | 082345678901 |
+| Citra Kirana   | citra@example.com  | 083456789012 |
+| Dewi Sartika   | dewi@example.com   | 084567890123 |
+| Eko Suharjo    | eko@example.com    | 085678901234 |
+| Fajar Nugraha  | fajar@example.com  | 086789012345 |
+| Gita Surya     | gita@example.com   | 087890123456 |
+| Hani Putri     | hani@example.com   | 088901234567 |
+| Iwan Setiawan  | iwan@example.com   | 089012345678 |
+| Julia Perez    | julia@example.com  | 080123456789 |
+| Kevin Sanjaya  | kevin@example.com  | 081234567891 |
+| Luna Maya      | luna@example.com   | 082345678902 |
+| Mila Kunis     | mila@example.com   | 083456789013 |
+| Nino Fernandez | nino@example.com   | 084567890124 |
+| Olga Syahputra | olga@example.com   | 085678901235 |
+| Pamela Bowie   | pamela@example.com | 086789012346 |
+| Queen Latifah  | queen@example.com  | 087890123457 |
+| Rico Tampatty  | rico@example.com   | 088901234568 |
+| Sandra Dewi    | sandra@example.com | 089012345679 |
+| Tina Toon      | tina@example.com   | 080123456790 |
++----------------+--------------------+--------------+
+20 rows in set (0.002 sec)
+
+MariaDB [polmed_kuliah_reservasi_hotel]> select
+    -> jenis_kamar,
+    -> harga_per_malam
+    -> from tb_kamar;
++-------------+-----------------+
+| jenis_kamar | harga_per_malam |
++-------------+-----------------+
+| Deluxe      |          750000 |
+| Superior    |          500000 |
+| Suite       |         1500000 |
+| Standard    |          300000 |
+| Deluxe      |          750000 |
+| Superior    |          500000 |
+| Suite       |         1500000 |
+| Standard    |          300000 |
+| Deluxe      |          750000 |
+| Superior    |          500000 |
+| Suite       |         1500000 |
+| Standard    |          300000 |
+| Deluxe      |          750000 |
+| Superior    |          500000 |
+| Suite       |         1500000 |
+| Standard    |          300000 |
+| Deluxe      |          750000 |
+| Superior    |          500000 |
+| Suite       |         1500000 |
+| Standard    |          300000 |
++-------------+-----------------+
+20 rows in set (0.001 sec)
+
+MariaDB [polmed_kuliah_reservasi_hotel]> select * from tb_kamar
+    -> where kapasitas > 2;
++----------+-------------+-----------+-----------------+
+| kamar_id | jenis_kamar | kapasitas | harga_per_malam |
++----------+-------------+-----------+-----------------+
+|        3 | Suite       |         4 |         1500000 |
+|        7 | Suite       |         4 |         1500000 |
+|       11 | Suite       |         4 |         1500000 |
+|       15 | Suite       |         4 |         1500000 |
+|       19 | Suite       |         4 |         1500000 |
++----------+-------------+-----------+-----------------+
+5 rows in set (0.039 sec)
+
+MariaDB [polmed_kuliah_reservasi_hotel]> select * from tb_reserv
+asi_hotel
+    -> where total_biaya > 1000000;
++--------------+--------------+----------+------------------+-------------------+--------------+-------------+
+| reservasi_id | pelanggan_id | kamar_id | tanggal_check_in | tanggal_check_out | jumlah_kamar | total_biaya |
++--------------+--------------+----------+------------------+-------------------+--------------+-------------+
+|            1 |            1 |        1 | 2024-09-01       | 2024-09-03        |            2 |     3000000 |
+|            3 |            3 |        3 | 2024-09-10       | 2024-09-12        |            3 |     9000000 |
+|            5 |            5 |        5 | 2024-09-20       | 2024-09-22        |            2 |     3000000 |
+|            7 |            7 |        7 | 2024-10-01       | 2024-10-03        |            3 |     9000000 |
+|            9 |            9 |        9 | 2024-10-10       | 2024-10-12        |            2 |     3000000 |
+|           11 |           11 |       11 | 2024-10-20       | 2024-10-22        |            3 |     9000000 |
+|           13 |           13 |       13 | 2024-11-01       | 2024-11-03        |            2 |     3000000 |
+|           15 |           15 |       15 | 2024-11-10       | 2024-11-12        |            3 |     9000000 |
+|           17 |           17 |       17 | 2024-11-20       | 2024-11-22        |            2 |     3000000 |
+|           19 |           19 |       19 | 2024-12-01       | 2024-12-03        |            3 |     9000000 |
++--------------+--------------+----------+------------------+-------------------+--------------+-------------+
+10 rows in set (0.037 sec)
+
+MariaDB [polmed_kuliah_reservasi_hotel]> select * from tb_pelang
+gan
+    -> where jenis_kelamin = 'Perempuan';
++--------------+---------------+---------------+---------------+---------------------------------+--------------------+--------------+
+| pelanggan_id | nama          | tanggal_lahir | jenis_kelamin | alamat                          | email              | no_telepon   |
++--------------+---------------+---------------+---------------+---------------------------------+--------------------+--------------+
+|            3 | Citra Kirana  | 1992-05-22    | Perempuan     | Jl. Rajawali No.3, Surabaya     | citra@example.com  | 083456789012 |
+|            4 | Dewi Sartika  | 1988-01-30    | Perempuan     | Jl. Sudirman No.8, Yogyakarta   | dewi@example.com   | 084567890123 |
+|            7 | Gita Surya    | 1991-10-10    | Perempuan     | Jl. Pahlawan No.11, Palembang   | gita@example.com   | 087890123456 |
+|            8 | Hani Putri    | 1993-08-19    | Perempuan     | Jl. Bung Tomo No.6, Makassar    | hani@example.com   | 088901234567 |
+|           10 | Julia Perez   | 1989-03-03    | Perempuan     | Jl. Raya Kuta No.13, Bali       | julia@example.com  | 080123456789 |
+|           12 | Luna Maya     | 1995-02-02    | Perempuan     | Jl. Kalimantan No.15, Samarinda | luna@example.com   | 082345678902 |
+|           13 | Mila Kunis    | 1990-12-12    | Perempuan     | Jl. Celebes No.16, Palu         | mila@example.com   | 083456789013 |
+|           16 | Pamela Bowie  | 1993-08-08    | Perempuan     | Jl. Jawa No.19, Bandar Lampung  | pamela@example.com | 086789012346 |
+|           17 | Queen Latifah | 1991-07-07    | Perempuan     | Jl. Papua No.20, Jayapura       | queen@example.com  | 087890123457 |
+|           19 | Sandra Dewi   | 1990-03-03    | Perempuan     | Jl. Borneo No.22, Banjarmasin   | sandra@example.com | 089012345679 |
+|           20 | Tina Toon     | 1991-01-01    | Perempuan     | Jl. Nusa Tenggara No.23, Kupang | tina@example.com   | 080123456790 |
++--------------+---------------+---------------+---------------+---------------------------------+--------------------+--------------+
+11 rows in set (0.001 sec)
+
+MariaDB [polmed_kuliah_reservasi_hotel]> exit;
+Bye
